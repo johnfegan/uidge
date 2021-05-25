@@ -35,6 +35,26 @@ a {
 
 h1, h2, h3 {
     padding: 20px 0 20px 0;
+	font-weight: normal;
+}
+
+ h3 {
+	font-size: 16px;
+	font-weight: 600;
+	font-family: Open Sans, sans-serif;
+    color: #CAAC63;
+    text-decoration: none;
+}
+
+p {
+	font-size: 14px;
+	font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.published  {
+    color: #959595;
+    padding: 0px 0 10px 0;
 }
 
 picture, img {
@@ -140,8 +160,10 @@ nav.social img {
 #drawer section {
 	border-bottom: 2px solid #CAAC63;
 	border-right: 2px solid #CAAC63;
+	border-left: 2px solid #CAAC63;
 	padding: 40px;
 	width: 256px;
+	background-color: #535353;
 }
 
 .overlay {
@@ -169,14 +191,18 @@ nav.social img {
 }
 
 .smallbutton {
-    color: #000;
+    color: #343434;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     background-color: #caac63;
-    border-radius: 30px;
+    border-radius: 8px;
     min-width: 170px;
     margin-top: 10px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
 }
 
 .flexcast {
@@ -199,14 +225,16 @@ nav.social img {
 .oneth {
 	display: flex;
     flex-basis: 25%;
-	padding: 20px 20px 0px 0;
+	padding: 10px 20px 10px 0;
 }
 
 .threeth {
     display: flex;
     flex-basis: 75%;
 	padding-left: 20px;
-	border-left: 2px solid #CAAC63;
+	padding-right: 20px;
+	border-left: 1px solid #CAAC63;
+	border-right: 1px solid #CAAC63;
 }
 
 .quotes {
@@ -288,14 +316,29 @@ footer .third a {
 }
 
 .copyright p {
-	padding: 20px 0;
-	text-align: center;
+   padding: 20px;
+    text-align: center;
+    color: #2c2c2c;
 }
+
+.copyright a {
+	color: #2c2c2c;
+	font-family: Georgia, serif;
+	text-decoration: underline;
+}
+
 
 @media screen and (min-width: 600px) {
 	.menubutton, .search {
 		display: none;
 	}
+	main {
+		padding: 0px 120px 0px 120px;
+	}
+
+	footer .thirds {
+    padding: 0 180px 0 180px;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -321,9 +364,19 @@ footer .third a {
 		display:flex;
 		flex-direction: column;
 	}
-	.threeth {
-		border-left: 0px;
-	}
+	.oneth {
+    padding: 0px 0px 20px 0;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer .third a {
+    font-size: 14px;
+}
+
+
 }
 
 
