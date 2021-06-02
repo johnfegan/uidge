@@ -275,6 +275,7 @@ nav.social img {
     align-items: center;
     min-height: 300px;
     background-repeat: no-repeat;
+	background-size: cover;
     background-image: url(images/desktop_mtc_gcx.png);
 }
 
@@ -315,6 +316,7 @@ audio {
     justify-content: space-between;
     margin-bottom: 20px;
     background-repeat: no-repeat;
+	background-size: cover;
     background-image: url(images/pc_desktop_banner.png);
 }
 
