@@ -1,0 +1,72 @@
+.tltext p, .tltext p {
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #CAAC63;
+    border-top: 1px solid #959595;
+    margin: 20px 0 0 0;
+    padding: 20px 0px;
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+/* table */
+
+.breadcrumbs {
+	display: flex;
+	padding-inline-start: 0px;
+    margin: 0em;
+}
+
+.breadcrumbs li {
+    margin-left: 18px;
+}
+
+/* table */
+
+.data {
+	overflow-x:auto;
+	margin: 20px 0px 20px 0px;
+	min-width: 100%;
+}
+
+table {
+	min-height: 0;
+	padding: 20px 0 20px 0;
+	min-width: 100%;
+	
+}
+
+tr {
+    border-bottom: 12px solid rgba(255,255,255,.12);
+	background: #2c2c2c;
+}
+
+th {
+    background-color: #535353;
+	font-weight: 400;
+	padding: 12px;
+}
+
+
+td {
+	text-align: center;
+	padding: 12px;
+}
+
+@media screen and (max-width: 600px) {
+	.data {
+		max-width: 320px;
+	}
+}
+
+
+
+
