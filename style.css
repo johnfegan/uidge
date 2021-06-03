@@ -56,14 +56,52 @@ p {
     padding-bottom: 10px;
 }
 
+.narrow {
+	padding: 0px 90px;
+}
+
+.paginate {
+    justify-content: space-evenly;
+    display: flex;
+}
+
 .published  {
     color: #959595;
     padding: 0px 0 10px 0;
 }
 
+.socialfeed, .share {
+	display: flex;	
+}
+
+.bordleft {
+	padding-left: 10px;
+	border-left: 1px solid #CAAC63;
+}
+
+.share img {
+	padding-right: 10px;
+}
+
+img.transcript {
+    display: inline;
+}
+
+p.transcript, .castscript{
+	padding-bottom: 0px;
+	margin: 2px;
+    font-size: 18px;
+}
+
+.drammage {
+	
+}
+
+
+/* removed 
 picture, img {
 	width: 100%;
-}
+}*/
 
 /* Header */
 header {
