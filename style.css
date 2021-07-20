@@ -94,9 +94,59 @@ p.transcript, .castscript{
 }
 
 .drammage {
-	
+	border: 2px solid #CAAC63;
+	margin: 10px;
+	border-bottom: 0;
 }
 
+.drammage p {
+    padding: 10px 0 0 0;
+}
+
+.whanser {
+	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.whanser img {
+	border-bottom: 2px solid #CAAC63;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.dram-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.drammage .dram {
+	color: #CAAC63;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.dram-item {
+    border-bottom: 2px solid #CAAC63;
+    padding: 0 0 10px 0
+}
+
+.dram-button {
+    color: #343434;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #caac63;
+    border-radius: 8px;
+    max-width: 170px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
 
 /* removed 
 picture, img {
@@ -244,6 +294,13 @@ nav.social img {
 	font-size: 14px;
 	font-weight: 600;
 }
+
+.smallbutton p, .dram-button p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
 
 }
 
