@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="no-js">
+   <head lang="en" >
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=10" />
+      <title>Whiskipedia: The Whisky Encylopedia </title>
+      <meta name="generator" content="Hugo 0.74.3" />
+      <meta name="description" content="The Whisky Enclopedia">
+      <link rel="canonical" href="https://whiskipedia.com/" />
+      <meta name="author" content="John">
+      <meta property="og:title" content="Whiskipedia">
+      <meta name="description" content="The Whisky Enclopedia">
+      <meta property="og:url" content="https://whiskipedia.com/">
+      <meta name="apple-mobile-web-app-title" content="Whiskipedia">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <link rel="shortcut icon" type="image/x-icon"
+         href="https://whiskipedia.com/images/favicon.ico">
+      <link rel="icon" type="image/x-icon"
+         href="https://whiskipedia.com/images/favicon.ico">
+      <link rel="stylesheet" href="style.css"> 
+   </head>
+   
+	<body class="body">
+		<header>
+			<div class="menubutton centralise" id="menu">
+				<img src="images/btn_open_nav.png" alt="menu">
+			</div>
+			<div class="middle">
+				<a href="/"><h1>
+					<div class="logobox">
+						<img class="logo" src="images/logo_whiskipedia.png" alt="Whiskipedia: The Whisky Enclopedia">
+					</div>
+				</h1>
+				</a>
+			</div>
+			<div class="search centralise">
+				<p></p>
+			</div>
+		</header>
+		
+		<main>
+			<label class="toggle-button" id="overlay"></label>
+			<div id="drawer" aria-expanded="true">
+				
+				<section>
+					<div class="border"></div>
+					<h2 class="sideheader">Distillery Lists</h2>
+					<nav>
+						<a href="/">Distilleries</a>
+						<a href="/">Alfred Barnard</a>
+						<a href="/">SMWS Codes</a>
+					</nav>
+					<div class="border"></div>
+
+					<h2 class="sideheader">Whisky Fundementals</h2>
+					<nav>
+						<a href="/">Fundamentals</a>
+						<a href="/">Touring a Distillery</a>
+					</nav>
+					<div class="border"></div>
+
+					<h2 class="sideheader">Social Links</h2>
+					<nav class="social">
+						<a href=""><img class="logo" src="images/social_insta.png" alt="Insta"></a>
+						<a href=""><img class="logo" src="images/social_twitter.png" alt="Twitter"></a>
+					</nav>
+				</section>
+			</div>
+
+	<article id="article">
+	
+	
+	</article>	
+
+
+	</main>
+
+   <footer>
+      <div class="thirds">
+         <div class="third">
+            <p class="footheader">Useful Links</p>
+            <a title="SMWS Codes" href="/smws/">
+            SMWS Codes
+            </a>
+            <a title="Whisky Calendar" href="/calendar/">
+            Whisky Calendar
+            </a>
+            <a title="Whisky Fundamentals" href="/fundamentals/">
+            Whisky Fundamentals
+            </a>
+            <a title="Caramel (E150)" href="/fundamentals/spirit-caramel/">
+            Caramel (E150)
+            </a>
+         </div>
+         <div class="third">
+            <p class="footheader">Social Links</p>
+				<nav class="social">
+					<a href=""><img class="logo" src="images/social_insta.png" alt="Insta"></a>
+					<a href=""><img class="logo" src="images/social_twitter.png" alt="Twitter"></a>
+				</nav>
+         </div>
+         <div class="third">
+            <p class="footheader">About</p>
+            <a href="/caveats-conditions-and-notes/">Notes/Caveats</a>
+            <a href="/submissions/">Submissions</a>
+         </div>
+      </div>
+      <div class="copyright">
+         <p>All content copyright Whiskipedia 2021 Proudly powered by
+            <a href="https://www.gohugo.io" target="_blank">Hugo</a>
+         </p>
+      </div>
+   </footer>
+		
+		<script type="text/javascript">
+			const content = document.getElementById("article");
+			const toggle = document.getElementById("menu");
+			const drawer = document.getElementById("drawer");
+			const overlay = document.getElementById("overlay");
+
+			const show = () => {
+			  drawer.style.width = "250px";
+			  overlay.className = "overlay"
+			}
+
+			const hide = () => {
+			console.log(window.innerWidth);
+				if (window.innerWidth < 660) {
+				  drawer.style.width = "0px";
+				  document.getElementById("drawer").setAttribute("aria-expanded", "false");
+				  overlay.className = "toggle-button"
+				}
+			}
+
+			toggle.addEventListener('click', event => {
+			  if (window.innerWidth < 660) {
+				  drawer.style.width = "250px"
+			  }
+			  event.stopPropagation();
+			  JSON.parse(toggle.getAttribute('aria-expanded')) ? hide() : show()
+			  
+			})
+
+			const handleClosure = event => !content.contains(event.target) && hide()
+
+			window.addEventListener('click', handleClosure)
+			window.addEventListener('focusin', handleClosure)
+		</script>
+
+	</body>
+</html>

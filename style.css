@@ -48,12 +48,29 @@ h3 {
 	font-weight: 600;
     color: #CAAC63;
     text-decoration: none;
+	padding: 20px 0 10px 0;
+}
+
+article h1, article h2, article h3 {
+	color: #CAAC63;
 }
 
 p {
 	font-size: 14px;
 	font-weight: normal;
     padding-bottom: 10px;
+}
+
+.title, .navheader, article h2 a, article h3 a, article h4 a, article h1, article h2, article h3, article h4 {
+    color: #CAAC63;
+}
+
+blockquote {
+	border-left: 2px solid #ffa100 !important;
+}
+
+blockquote p, strong {
+	color: #ffa100;
 }
 
 .narrow {
@@ -94,7 +111,7 @@ p.transcript, .castscript{
 }
 
 .drammage {
-	border: 2px solid #CAAC63;
+	border: 1px solid #CAAC63;
 	margin: 10px;
 	border-bottom: 0;
 }
@@ -110,7 +127,7 @@ p.transcript, .castscript{
 }
 
 .whanser img {
-	border-bottom: 2px solid #CAAC63;
+	border-bottom: 1px solid #CAAC63;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 }
@@ -131,7 +148,7 @@ p.transcript, .castscript{
 }
 
 .dram-item {
-    border-bottom: 2px solid #CAAC63;
+    border-bottom: 1px solid #CAAC63;
     padding: 0 0 10px 0
 }
 
@@ -147,6 +164,103 @@ p.transcript, .castscript{
     font-size: 14px;
     font-weight: 600;
 }
+
+
+/* Tables */
+table th {
+    background: #424242;
+    color: #CAAC63;
+}
+article table td, article table th {
+    padding: 12px 16px;
+}
+article table th {
+    min-width: 100px;
+    font-size: 12px;
+}
+
+article .data table, .data {
+    width: 100%;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+article table th{background:#424242;color:#CAAC63}
+article .data table, .data {
+	width: 100%;
+}
+
+article table td, article table th {
+    padding: 12px 16px;
+}
+article table td {
+    border-top: 1px solid rgba(0,0,0,.05);
+}
+td {
+    text-align: center;
+}
+td {
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+
+/* Breadcrumbs + lists */
+:after, :before {
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+}
+
+ul.breadcrumbs >li:before {
+    content: "\e602";
+    display: block;
+    float: left;
+    font-family: Icon;
+    font-size: 16px;
+    width: 1.2em;
+    margin-left: -1.2em;
+    vertical-align: -.1em;
+}
+
+
+.breadcrumbs {
+    display: flex;
+}
+
+ul.breadcrumbs {
+    padding-inline-start: 0px;
+	list-style: none;
+}
+
+.breadcrumbs li {
+    margin-left: 18px;
+}
+
+
+
+
+/* reviews */
+
+.procons {
+	display: flex;
+	margin-left: 20px;
+}
+
+.reviews {
+    border: 3px solid rgba(0,0,0,.12);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+
 
 /* removed 
 picture, img {
@@ -293,6 +407,9 @@ nav.social img {
     margin-top: 10px;
 	font-size: 14px;
 	font-weight: 600;
+    display: flex;
+    justify-content: center;
+	font-family: Open Sans, san-serif;
 }
 
 .smallbutton p, .dram-button p {
@@ -300,21 +417,7 @@ nav.social img {
     padding-bottom: 5px;
 }
 
-.smallbutton {
-    color: #343434;
-    text-align: center;
-    text-decoration: none;
-    background-color: #caac63;
-    border-radius: 8px;
-    max-width: 268px;
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-}
 
-}
 
 .flexcast {
     display: flex;
@@ -462,6 +565,7 @@ audio {
 /* Main */
 article {
     margin: 0px 24px 0px;
+	padding: 0px 10px;
     flex-grow: 4;
     flex-basis: 85%;
 }
@@ -484,6 +588,18 @@ article .border {
 	padding: 20px 0px;
 }
 
+/* Single */
+
+.tltext {
+    display: flex;
+    justify-content: center;
+	color: #CAAC63;
+}
+
+.border {
+    border-bottom: 1px solid #CAAC63;
+    margin: 2em 0;
+}
 
 /* Footer */
 footer {
@@ -522,6 +638,27 @@ footer .third a {
 	text-decoration: underline;
 }
 
+.tocont {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    margin-bottom: 1em;
+}
+
+.featuredart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+  position: relative;
+  list-style: none;
+}
+
+ul li::before {
+  content: '▶';
+  position: absolute;
+  left: 1em;
+}
 
 @media screen and (min-width: 600px) {
 	.menubutton, .search {
@@ -604,6 +741,9 @@ footer .third a {
 		flex-direction: column;
 		background-repeat: no-repeat;
 		background-image: url(images/pc_mobile_banner.png);
+	}
+	article {
+		padding: 0px 0px;
 	}
 
 }
